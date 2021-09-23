@@ -1406,7 +1406,8 @@ $('#submitBtn').click(function () {
     } else if (message == "") {　//訊息
         $('.formblock:nth-child(8) p').addClass('formblock__required--active');
         alert("資料填寫尚未完成");
-    } else if (response.length == 0) {　//訊息
+    } else if (response.length == 0) {　
+        // 訊息
         console.log('robot valid');
         alert("請勾選驗證");
     } else {　//否則就執行子句三
@@ -1429,7 +1430,11 @@ $('#submitBtn').click(function () {
             },
             success: function (response) {
                 if (response == "成功") {
-                    alert("已收到您的問題");
+                    $('input[name="gender"]').prop('checked', false);
+                    $(".formblock__textblock").val("");
+                    $('select').prop('selectedIndex', 0);
+                    $("textarea").val("");
+                    alert("已收到您的訊息");
                     console.log(fullname, gender, phone, email, area, shop, year, month, date, product)
                 }
             },
