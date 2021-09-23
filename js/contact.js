@@ -1370,52 +1370,38 @@ $('#submitBtn').click(function () {
 
     console.log(validateEmail(email));
 
+    $('.formblock p').removeClass('formblock__required--active');
+    $('.formblock__errorhint').removeClass('formblock__errorhint--active');
+
     if (fullname == "") {　
         //全名
         $('.formblock:nth-child(1) p').addClass('formblock__required--active');
-        console.log('a');
         alert("資料填寫尚未完成");
     } else if (!gender) {　//性別
-        $('.formblock:nth-child(1) p').removeClass('formblock__required--active');
         $('.formblock:nth-child(2) p').addClass('formblock__required--active');
-        console.log('b');
         alert("資料填寫尚未完成");
     } else if (phone == "") {　//電話
-        $('.formblock:nth-child(2) p').removeClass('formblock__required--active');
         $('.formblock:nth-child(3) p').addClass('formblock__required--active');
-        console.log('c');
         alert("資料填寫尚未完成");
     } else if (email == "") {　//電子信箱
-        $('.formblock:nth-child(3) p').removeClass('formblock__required--active');
         $('.formblock:nth-child(4) p').addClass('formblock__required--active');
-        console.log('d');
         alert("資料填寫尚未完成");
-    } else if (area == "" || shop == "") {　//地區
-        $('.formblock:nth-child(4) p').removeClass('formblock__required--active');
-        $('.formblock:nth-child(5) p').addClass('formblock__required--active');
-        console.log('e');
-        alert("資料填寫尚未完成");
-    } else if (year == "" || month == "" || date == "") {　//年
-        $('.formblock:nth-child(5) p').removeClass('formblock__required--active');
-        $('.formblock:nth-child(6) p').addClass('formblock__required--active');
-        console.log('f');
-        alert("資料填寫尚未完成");
-    } else if (product == "") {　//產品類別
-        $('.formblock:nth-child(6) p').removeClass('formblock__required--active');
-        $('.formblock:nth-child(7) p').addClass('formblock__required--active');
-        console.log('g');
-        alert("資料填寫尚未完成");
-    } else if (message == "") {　//訊息
-        $('.formblock:nth-child(7) p').removeClass('formblock__required--active');
-        $('.formblock:nth-child(8) p').addClass('formblock__required--active');
-        console.log('h');
-        alert("資料填寫尚未完成");
-    } else if (validateEmail(email) == false) {　
+    }  else if (validateEmail(email) == false) {　
         //驗證電子信箱格式
         // 抄來的正規表示式
-        $('.formblock:nth-child(8) p').removeClass('formblock__required--active');
         $('.formblock__errorhint').addClass('formblock__errorhint--active');
-        console.log('i');
+        alert("資料填寫尚未完成");
+    } else if (area == "" || shop == "") {　//地區
+        $('.formblock:nth-child(5) p').addClass('formblock__required--active');
+        alert("資料填寫尚未完成");
+    } else if (year == "" || month == "" || date == "") {　//年
+        $('.formblock:nth-child(6) p').addClass('formblock__required--active');
+        alert("資料填寫尚未完成");
+    } else if (product == "") {　//產品類別
+        $('.formblock:nth-child(7) p').addClass('formblock__required--active');
+        alert("資料填寫尚未完成");
+    } else if (message == "") {　//訊息
+        $('.formblock:nth-child(8) p').addClass('formblock__required--active');
         alert("資料填寫尚未完成");
     } else {　//否則就執行子句三
 
