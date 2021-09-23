@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Microsoft JhengHei;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.banner {
+  background: url(https://www.kobayashi.com.tw/images/history/banner_img.jpg);
+  background-attachment: fixed;
+  background-size: 100% auto;
+  height: 390px;
+  width: 100%;
+  padding-top: 170px;
+}
+
+.banner__title {
+  margin: 0 auto;
+  font-size: 58px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.banner__subtitle {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.breadcrumbs {
+  width: 100%;
+  background: #e8ebee;
+  padding: 20px 0 20px 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumbs__item {
+  color: #999999;
+  margin: 0 10px;
+}
+
+.breadcrumbs__item p {
+  color: #666;
+  font-size: 14px;
+}
+
+.breadcrumbs__arrow {
+  color: #999999;
+}
+
+.timeline {
+  width: 1080px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  margin-top: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.timeline .timeblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.timeline .timeblock__item {
+  width: 100%;
+}
+
+.timeline .timeblock__item--age {
+  text-align: center;
+  margin: 0px 15px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline .timeblock__item--age p {
+  padding: 5px 0;
+  margin-top: -5px;
+  background: white;
+  color: #3e74b9;
+  font-size: 24px;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.timeline .timeblock__item--age::before {
+  display: block;
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: #b2c7e3;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: -1;
+}
+
+.timeline .timeblock__item--ageend::before {
+  display: none;
+}
+
+.timeline .timeblock__item--ageend::after {
+  content: '';
+  display: block;
+  height: 18px;
+  width: 18px;
+  border-radius: 30px;
+  background: #b2c7e3;
+  margin: 10px auto;
+}
+
+.timeline .timeblock__item--content {
+  border-right: 1px solid #ccc;
+}
+
+.timeline .timeblock__item--content li {
+  border-left: 1px solid #ccc;
+  padding: 8px;
+  padding-left: 25px;
+  padding-top: 0;
+  margin: 0 10px 10px;
+  position: relative;
+}
+
+.timeline .timeblock__item--content .timelist {
+  margin-left: 15px;
+  width: 80%;
+}
+
+.timeline .timeblock__item--content .timelist__item {
+  list-style: none;
+}
+
+.timeline .timeblock__item--content .timelist__item::after {
+  display: block;
+  position: absolute;
+  background: #00b688;
+  content: '';
+  height: 8px;
+  width: 8px;
+  top: 4px;
+  left: 0;
+  -webkit-transform: translate(calc(-50% - 0.5px), -50%);
+          transform: translate(calc(-50% - 0.5px), -50%);
+}
+
+.timeline .timeblock__item--content .timelist__item p {
+  font-size: 15px;
+}
+
+.timeline .timeblock__item--blank {
+  border-right: 1px solid #cccccc00;
+}
+
+.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 700.9px) {
+  .banner {
+    height: 160px;
+    padding-top: 60px;
+  }
+  .banner__title {
+    margin: 0 auto;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+  }
+  .banner__title__subtitle {
+    margin-top: 5px;
+  }
+  .banner__title__subtitle p {
+    font-size: 10px;
+  }
+  .breadcrumbs {
+    padding: 16px 0 16px 30px;
+  }
+  .timeline {
+    width: 98%;
+  }
+  .timeline .timeblock__item--content {
+    border-right: 1px solid white;
+  }
+  .timeline .timeblock__item--content .timelist {
+    width: 95%;
+  }
+  .timeline .timeblock__item--blank {
+    display: none;
+  }
+  .reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=chronology.css.map */

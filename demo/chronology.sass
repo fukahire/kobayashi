@@ -1,0 +1,157 @@
+*
+    margin: 0
+    padding: 0
+    font-family: Arial, Microsoft JhengHei
+    box-sizing: border-box
+
+.banner
+    background: url(https://www.kobayashi.com.tw/images/history/banner_img.jpg)
+    background-attachment: fixed
+    background-size: 100% auto
+    height: 390px
+    width: 100%
+    padding-top: 170px
+    &__title
+        margin: 0 auto
+        font-size: 58px
+        letter-spacing: 5px
+        text-align: center
+    &__subtitle
+        margin: 0 auto
+        text-align: center
+
+.breadcrumbs
+    width: 100%
+    background: #e8ebee
+    padding: 20px 0 20px 140px
+    display: flex
+    align-items: center
+    &__item
+        color: #999999
+        margin: 0 10px
+        p
+            color: #666
+            font-size: 14px
+    &__arrow
+        color: #999999
+
+.timeline
+    width: 1080px
+    display: flex
+    flex-direction: column
+    margin:  auto
+    margin-top: 40px
+    justify-content: center
+    align-items: center
+    position: relative
+    // background: purple
+    .timeblock
+        display: flex
+        justify-content: center
+        // background: green
+        width: 100%
+        &__item
+            width:  100%
+            // background: aqua
+            &--age
+                // width: 180px
+                text-align: center
+                margin: 0px 15px 0px
+                position: relative
+                z-index: 1
+                p
+                    padding: 5px 0
+                    margin-top: -5px
+                    background:  white
+                    color: #3e74b9
+                    font-size: 24px
+                    font-weight: 600
+                    z-index: 10
+                &::before
+                    display: block
+                    content: ''
+                    width:  2px
+                    height:  100%
+                    background:  #b2c7e3
+                    position: absolute
+                    top: 0
+                    left: 50%
+                    height: 100%
+                    transform: translate(-50%,0)
+                    z-index: -1
+            &--ageend
+                &::before
+                    display: none
+                &::after
+                    content: ''
+                    display: block
+                    height: 18px
+                    width: 18px
+                    border-radius: 30px
+                    background: #b2c7e3
+                    margin: 10px auto
+                    // position: relative
+            &--content
+                border-right: 1px solid #ccc
+                li
+                    border-left: 1px solid #ccc
+                    padding:  8px
+                    padding-left: 25px
+                    padding-top: 0
+                    margin: 0 10px 10px
+                    position: relative
+                .timelist
+                    margin-left: 15px
+                    width: 80%
+                    // background: salmon
+                    &__item
+                        list-style: none
+                        &::after
+                            display: block
+                            position: absolute
+                            background:  #00b688
+                            content: ''
+                            height: 8px
+                            width: 8px
+                            top: 4px
+                            left: 0
+                            transform: translate(calc(-50% - 0.5px),-50%)
+                        p
+                            font-size: 15px
+            &--blank
+                border-right: 1px solid #cccccc00
+
+
+.reverse
+    flex-direction: row-reverse
+
+
+@media (max-width: 700.9px)
+    .banner
+        height: 160px
+        padding-top: 60px
+        &__title
+            margin: 0 auto
+            font-size: 20px
+            letter-spacing: 3px
+            text-align: center
+            color: #333
+            font-weight: 600
+            &__subtitle
+                margin-top: 5px
+                p
+                    font-size: 10px
+    .breadcrumbs
+        padding: 16px 0 16px 30px
+    .timeline
+        width: 98%
+        .timeblock__item
+            &--content
+                border-right: 1px solid white
+                .timelist
+                    width: 95%
+            &--blank
+                display: none
+    .reverse
+        flex-direction: row
+  
