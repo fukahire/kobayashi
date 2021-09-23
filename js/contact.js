@@ -1284,6 +1284,7 @@ update = function (e) {
             str2 += '<option value="' + shoplist[i].value + '" >' + shoplist[i].shop + '</option>';
         } else if (e.target.value == '無') {
             shopoption.disabled = true;
+            str2 = '<option value="無">請選擇門市</option>';            
         }
         shopoption.innerHTML = str2;
     }
@@ -1348,7 +1349,7 @@ productoption.innerHTML = str6;
 
 // 串接
 
-$('#submitBtn').click(function(){
+$('#submitBtn').click(function () {
 
     let fullname = $('#fullname').val();
     let gender = $("input[name='gender']:checked").val();
@@ -1361,92 +1362,90 @@ $('#submitBtn').click(function(){
     let date = $("#date").val();
     let product = $("#product").val();
     let message = $('#message').val();
-    
-    var inputlist = [
-        {
-            'inputvalue': fullname,
-        },
-        {
-            'inputvalue': gender,
-        }, 
-        {
-            'inputvalue': phone,
-        }, 
-        {
-            'inputvalue': email,
-        }, 
-        {
-            'inputvalue': area,
-        }, 
-        {
-            'inputvalue': shop,
-        },
-        {
-            'inputvalue': year,
-        },
-        {
-            'inputvalue': month,
-        },
-        {
-            'inputvalue': date,
-        },
-        {
-            'inputvalue': product,
-        }
-    ];
-    var inputleng = inputlist.length;
-    var str = "";
-    var e = 0;
-    if(fullname == "" || gender == "" || phone == "" || email == "" || area == "" || shop == "" || year == "" || month == "" || date == "" || product == "" || message == ""){
-    //   console.log(fullname,gender,phone,email,area,shop,year,month,date,product);
-    // $('.formblock__required').addClass('formblock__required--active');
-    alert("資料填寫尚未完成");
 
-    for (i=0; i<inputleng; i++){
-        
-        e++;
-        if(inputlist[e].inputvalue == ""){
-            // str = $('.formblock__required:nth-child('+ e +')');
-            $('.formblock__required:nth-child(' + (e) +')').addClass('formblock__required--active');
-            break;
-        }
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
     }
 
-    // console.log(e);
-    console.log(e);
-    // var a = $('.formblock__required:nth-child(2)');
-    // console.log(str);
-      
-    }else{
-      $('.formblock__required').removeClass('formblock__required--active');
-      
-      $.ajax({
-      url: "https://script.google.com/macros/s/AKfycbxi2RwhpLcVt_LYgEP46lA8lqNGB3EjeLTIx1XDG4VvINyIBCwcf1n6RKlQ0KzQNcYt/exec",
-      data: {
-        "name": fullname,
-        "gender": gender,
-        "phone": phone,
-        "email": email,
-        "area": area,
-        "shop": shop,
-        "year": year,
-        "month": month,
-        "date": date,
-        "product": product,
-        "message": message,
-        // "reasons": reasons.toString(),
-      },
-      success: function (response) {
-        if (response == "成功") {
-          alert("成功");
-          console.log(fullname,gender,phone,email,area,shop,year,month,date,product)
-        }
-      },
-    });
+    console.log(validateEmail(email));
+
+    if (fullname == "") {　
+        //全名
+        $('.formblock:nth-child(1) p').addClass('formblock__required--active');
+        console.log('a');
+        alert("資料填寫尚未完成");
+    } else if (!gender) {　//性別
+        $('.formblock:nth-child(1) p').removeClass('formblock__required--active');
+        $('.formblock:nth-child(2) p').addClass('formblock__required--active');
+        console.log('b');
+        alert("資料填寫尚未完成");
+    } else if (phone == "") {　//電話
+        $('.formblock:nth-child(2) p').removeClass('formblock__required--active');
+        $('.formblock:nth-child(3) p').addClass('formblock__required--active');
+        console.log('c');
+        alert("資料填寫尚未完成");
+    } else if (email == "") {　//電子信箱
+        $('.formblock:nth-child(3) p').removeClass('formblock__required--active');
+        $('.formblock:nth-child(4) p').addClass('formblock__required--active');
+        console.log('d');
+        alert("資料填寫尚未完成");
+    } else if (area == "" || shop == "") {　//地區
+        $('.formblock:nth-child(4) p').removeClass('formblock__required--active');
+        $('.formblock:nth-child(5) p').addClass('formblock__required--active');
+        console.log('e');
+        alert("資料填寫尚未完成");
+    } else if (year == "" || month == "" || date == "") {　//年
+        $('.formblock:nth-child(5) p').removeClass('formblock__required--active');
+        $('.formblock:nth-child(6) p').addClass('formblock__required--active');
+        console.log('f');
+        alert("資料填寫尚未完成");
+    } else if (product == "") {　//產品類別
+        $('.formblock:nth-child(6) p').removeClass('formblock__required--active');
+        $('.formblock:nth-child(7) p').addClass('formblock__required--active');
+        console.log('g');
+        alert("資料填寫尚未完成");
+    } else if (message == "") {　//訊息
+        $('.formblock:nth-child(7) p').removeClass('formblock__required--active');
+        $('.formblock:nth-child(8) p').addClass('formblock__required--active');
+        console.log('h');
+        alert("資料填寫尚未完成");
+    } else if (validateEmail(email) == false) {　
+        //驗證電子信箱格式
+        // 抄來的正規表示式
+        $('.formblock:nth-child(8) p').removeClass('formblock__required--active');
+        $('.formblock__errorhint').addClass('formblock__errorhint--active');
+        console.log('i');
+        alert("資料填寫尚未完成");
+    } else {　//否則就執行子句三
+
+        $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbxi2RwhpLcVt_LYgEP46lA8lqNGB3EjeLTIx1XDG4VvINyIBCwcf1n6RKlQ0KzQNcYt/exec",
+            data: {
+                "name": fullname,
+                "gender": gender,
+                "phone": phone,
+                "email": email,
+                "area": area,
+                "shop": shop,
+                "year": year,
+                "month": month,
+                "date": date,
+                "product": product,
+                "message": message,
+                // "reasons": reasons.toString(),
+            },
+            success: function (response) {
+                if (response == "成功") {
+                    alert("成功");
+                    console.log(fullname, gender, phone, email, area, shop, year, month, date, product)
+                }
+            },
+        });
     }
-    
-  }
-  )
+
+}
+)
 
 //   全部重填
 $('#resetBtn').click(function(){
