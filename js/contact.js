@@ -1238,19 +1238,19 @@ var productlist = [
     {
         'product': '眼鏡',
         'value': '眼鏡'
-    }, 
+    },
     {
         'product': '隱形眼鏡',
         'value': '隱形眼鏡'
-    }, 
+    },
     {
         'product': '太陽眼鏡',
         'value': '太陽眼鏡'
-    }, 
+    },
     {
         'product': '食品',
         'value': '食品'
-    }, 
+    },
     {
         'product': '其他',
         'value': '其他'
@@ -1284,7 +1284,7 @@ update = function (e) {
             str2 += '<option value="' + shoplist[i].value + '" >' + shoplist[i].shop + '</option>';
         } else if (e.target.value == '無') {
             shopoption.disabled = true;
-            str2 = '<option value="無">請選擇門市</option>';            
+            str2 = '<option value="無">請選擇門市</option>';
         }
         shopoption.innerHTML = str2;
     }
@@ -1373,7 +1373,10 @@ $('#submitBtn').click(function () {
     $('.formblock p').removeClass('formblock__required--active');
     $('.formblock__errorhint').removeClass('formblock__errorhint--active');
 
-    if (fullname == "") {　
+
+    var response = grecaptcha.getResponse();
+
+    if (fullname == "") {
         //全名
         $('.formblock:nth-child(1) p').addClass('formblock__required--active');
         alert("資料填寫尚未完成");
@@ -1386,7 +1389,7 @@ $('#submitBtn').click(function () {
     } else if (email == "") {　//電子信箱
         $('.formblock:nth-child(4) p').addClass('formblock__required--active');
         alert("資料填寫尚未完成");
-    }  else if (validateEmail(email) == false) {　
+    } else if (validateEmail(email) == false) {
         //驗證電子信箱格式
         // 抄來的正規表示式
         $('.formblock__errorhint').addClass('formblock__errorhint--active');
@@ -1403,6 +1406,9 @@ $('#submitBtn').click(function () {
     } else if (message == "") {　//訊息
         $('.formblock:nth-child(8) p').addClass('formblock__required--active');
         alert("資料填寫尚未完成");
+    } else if (response.length !== 0) {　//訊息
+        console.log('robot valid');
+        alert("請勾選驗證");
     } else {　//否則就執行子句三
 
         $.ajax({
@@ -1434,10 +1440,10 @@ $('#submitBtn').click(function () {
 )
 
 //   全部重填
-$('#resetBtn').click(function(){
+$('#resetBtn').click(function () {
     // alert('reset');
     $('input[name="gender"]').prop('checked', false);
     $(".formblock__textblock").val("");
-    $('select').prop('selectedIndex',0);
+    $('select').prop('selectedIndex', 0);
     $("textarea").val("");
 })
