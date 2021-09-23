@@ -1429,7 +1429,7 @@ $('#submitBtn').click(function () {
             },
             success: function (response) {
                 if (response == "成功") {
-                    alert("成功");
+                    alert("已收到您的問題");
                     console.log(fullname, gender, phone, email, area, shop, year, month, date, product)
                 }
             },
