@@ -1,0 +1,44 @@
+.breadcrumbs {
+  width: 100%;
+  background: #e8ebee;
+  padding: 20px 0 20px 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumbs__item {
+  color: #999999;
+  margin: 0 10px;
+}
+
+.breadcrumbs__item p {
+  color: #666;
+  font-size: 14px;
+}
+
+.breadcrumbs__arrow {
+  color: #999999;
+}
+
+@media (min-width: 960.1px) and (max-width: 1350px) {
+  .breadcrumbs {
+    padding: 20px 0 20px 10vw;
+  }
+}
+
+@media (min-width: 700.1px) and (max-width: 960px) {
+  .breadcrumbs {
+    padding: 16px 0 16px 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .breadcrumbs {
+    padding: 16px 0 16px 30px;
+  }
+}
+/*# sourceMappingURL=integrate_breadcrumbs.css.map */
