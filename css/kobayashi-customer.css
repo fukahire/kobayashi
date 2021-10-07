@@ -1,3 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -434,211 +453,6 @@
   }
 }
 
-.banner {
-  background: url(https://www.kobayashi.com.tw/images/profession/banner_img.jpg) no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  background-attachment: fixed;
-  background-size: 100% auto;
-  background-position: 100% 0%;
-  height: 300px;
-  margin: 80px 0 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner__title {
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 5px;
-  color: #333333;
-}
-
-.banner__subtitle {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-  letter-spacing: 2px;
-  margin-top: 8px;
-}
-
-@media (max-width: 1500px) and (min-width: 1350px) {
-  .banner {
-    height: 300px;
-  }
-}
-
-@media (max-width: 1349px) and (min-width: 1024px) {
-  .banner {
-    background-attachment: inherit;
-    height: 250px;
-    background-position: 100% 38%;
-    background-size: cover;
-  }
-}
-
-@media (max-width: 1023px) and (min-width: 960px) {
-  .banner {
-    background-attachment: inherit;
-    height: 250px;
-    background-position: 100% 30%;
-    background-size: cover;
-  }
-}
-
-@media (max-width: 959px) and (min-width: 700px) {
-  .banner {
-    background-attachment: inherit;
-    height: 200px;
-    background-position: 100% 38%;
-    background-size: cover;
-  }
-}
-
-@media (max-width: 960px) {
-  .banner {
-    margin-top: 60px;
-  }
-}
-
-@media (max-width: 700px) {
-  .banner {
-    background-attachment: inherit;
-    height: 160px;
-    background-position: 100% 25%;
-    background-size: cover;
-  }
-}
-
-@media (min-width: 961px) {
-  .pc--none {
-    display: none;
-  }
-}
-
-@media (max-width: 960px) {
-  .mb--none {
-    display: none;
-  }
-  .banner {
-    margin-top: 60px;
-  }
-}
-
-@media (max-width: 700px) {
-  .banner {
-    background-attachment: inherit;
-    height: 160px;
-    background-position: 100% 25%;
-    background-size: cover;
-  }
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/
- v2.0 | 20110126
- License: none (public domain)*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  box-sizing: border-box;
-}
-
-a, a:hover {
-  text-decoration: none;
-  color: #4D4D4D;
-}
-
-.breadcrumbs {
-  width: 100%;
-  background: #e8ebee;
-  padding: 20px 0 20px 140px;
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumbs__item {
-  color: #999999;
-  margin: 0 10px;
-}
-
-.breadcrumbs__item a:link, .breadcrumbs__item a:visited {
-  text-decoration: none;
-  color: #999999;
-}
-
-.breadcrumbs__item p {
-  color: #666;
-  font-size: 14px;
-}
-
-.breadcrumbs__arrow {
-  color: #999999;
-}
-
-@media (min-width: 960.1px) and (max-width: 1350px) {
-  .breadcrumbs {
-    padding: 20px 0 20px 10vw;
-  }
-}
-
-@media (min-width: 700.1px) and (max-width: 960px) {
-  .breadcrumbs {
-    padding: 16px 0 16px 40px;
-  }
-}
-
-@media (max-width: 700px) {
-  .breadcrumbs {
-    padding: 16px 0 16px 30px;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -869,316 +683,234 @@ i.icon--circle {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Microsoft JhengHei;
-}
-
-html {
-  overflow: scroll;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-  /* make scrollbar transparent */
-}
-
-.banner {
-  background: url(https://www.kobayashi.com.tw/images/contact/banner_img.jpg);
-}
-
-body {
-  background: #e3e3e3;
-}
-
-.contact {
-  background: white;
-  width: 1080px;
-  margin: 0 auto;
-  padding: 50px 0px;
-}
-
-.contact .warn {
-  background: #e3e3e3;
-  width: calc( 100% - 100px);
-  margin: 0 auto 40px;
-  padding: 40px;
-  display: flex;
-}
-
-.contact .warn__icon {
-  font-size: 35px;
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  color: white;
-  background: #FC798F;
-  text-align: center;
-  line-height: 80px;
-  font-weight: 100;
-}
-
-.contact .warn__message {
-  margin-left: 40px;
-  font-size: 13px;
-  color: #666;
-  line-height: 23px;
-}
-
-.contact .warn__message--hint {
-  color: #fe5959;
-}
-
-.contact .form .formblock {
-  display: flex;
-  justify-content: space-between;
-  width: calc( 100% - 100px);
-  padding: 30px 60px;
-  border-top: 1px solid #dedede;
-  margin: 0 auto;
-}
-
-.contact .form .formblock--head {
-  border-top: 1px dotted #dedede;
-}
-
-.contact .form .formblock--button {
-  border-top: 1px solid #dedede00;
-}
-
-.contact .form .formblock__tag {
-  color: #666;
-  font-size: 15px;
-  text-align: center;
-  line-height: 30px;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-.contact .form .formblock__input {
-  width: 750px;
-}
-
-.contact .form .formblock__textblock {
-  border: 1px solid #e3e3e3;
-  height: 30px;
-  padding: 0 5px;
-  color: #666;
-  font-size: 16px;
+.breadcrumbs {
   width: 100%;
-}
-
-.contact .form .formblock__textblock--select {
+  background: #e8ebee;
+  padding: 20px 0 20px 140px;
   display: flex;
-  padding: 0;
-  border: none;
-  justify-content: space-between;
+  align-items: center;
 }
 
-.contact .form .formblock__textblock--message {
-  height: 210px;
-  resize: none;
-  padding: 5px;
+.breadcrumbs__item {
+  color: #999999;
+  margin: 0 10px;
 }
 
-.contact .form .formblock__validation {
-  margin-left: 10px;
-  margin-top: 3px;
-  letter-spacing: 2px;
-  font-size: 11px;
-  line-height: 23px;
-  color: #FC798F;
-}
-
-.contact .form .formblock__required {
-  display: none;
-}
-
-.contact .form .formblock__required--active {
-  display: block;
-}
-
-.contact .form .formblock__errorhint {
-  display: none;
-}
-
-.contact .form .formblock__errorhint--active {
-  display: block;
-}
-
-.contact .form .formblock__select {
-  -webkit-appearance: none;
-  border: 1px solid #e3e3e3;
-  height: 30px;
-  width: 100%;
-  padding: 0 0 0 5px;
+.breadcrumbs__item p {
+  color: #666;
   font-size: 14px;
-  color: #666;
-  letter-spacing: 1px;
-  cursor: pointer;
 }
 
-.contact .form .formblock__select::-webkit-scrollbar {
-  display: none;
-}
-
-.contact .form .formblock__select--blocktwo {
-  width: calc( 98%/2);
-}
-
-.contact .form .formblock__select--blockthree {
-  width: calc( 96%/3);
-}
-
-.contact .form .formblock__radio {
-  display: flex;
-  width: 750px;
-}
-
-.contact .form .formblock__radio label {
-  display: inline-block;
-  margin: 0 40px 0 10px;
-  line-height: 30px;
-  color: #666;
-  font-size: 15px;
-  letter-spacing: 2px;
-}
-
-.contact .form .formblock__button {
-  width: 49%;
-  color: gray;
-  background: #787878;
-  border: none;
-  color: white;
-  padding: 12px 0;
-}
-
-.contact .form .formblock__button--submit {
-  background: #343434;
-}
-
-.contact .form__sign--arrow {
-  display: flex;
-  width: 80px;
-  height: 30px;
-  position: absolute;
-  left: 50px;
-  top: 7px;
-  animation: arrow 1s ease-out infinite;
-}
-
-.contact .form__sign--arrow div {
-  width: 11px;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 50% 50%, 0% 0%);
-  background: #5282C2;
-  height: 15px;
-}
-
-@keyframes arrow {
-  0%, 100% {
-    left: 145px;
-  }
-  50% {
-    left: 150px;
-  }
-}
-
-@media (min-width: 1350.1px) and (max-width: 1500px) {
-  .contact {
-    width: 880px;
-    padding: 40px 0px;
-  }
-  .contact .form .formblock {
-    padding: 30px 40px;
-    width: calc( 100% - 80px);
-  }
-  .contact .form .formblock__input {
-    width: 600px;
-  }
+.breadcrumbs__arrow {
+  color: #999999;
 }
 
 @media (min-width: 960.1px) and (max-width: 1350px) {
-  .contact {
-    width: 880px;
-    padding: 40px 0px;
-  }
-  .contact .form .formblock {
-    padding: 30px 40px;
-    width: calc( 100% - 80px);
-  }
-  .contact .form .formblock__input {
-    width: 600px;
+  .breadcrumbs {
+    padding: 20px 0 20px 10vw;
   }
 }
 
 @media (min-width: 700.1px) and (max-width: 960px) {
-  .contact {
-    width: 680px;
-    padding: 40px 0px;
-  }
-  .contact .form .formblock {
-    padding: 30px 40px;
-    width: calc( 100% - 80px);
-  }
-  .contact .form .formblock__input {
-    width: 400px;
-  }
-  .footer {
-    background-color: #E3E3E3;
+  .breadcrumbs {
+    padding: 16px 0 16px 40px;
   }
 }
 
 @media (max-width: 700px) {
-  .contact {
-    width: 95%;
-    padding: 40px 0px;
-  }
-  .contact .warn {
-    margin: 0 auto 20px;
-    padding: 20px;
-    width: calc( 100% - 50px);
-  }
-  .contact .warn__icon {
-    font-size: 16px;
-    height: 35px;
-    width: 35px;
-    border-radius: 45px;
-    line-height: 35px;
-  }
-  .contact .warn__message {
-    font-size: 12px;
-    margin-left: 20px;
-    width: calc( 100% - 65px);
-    line-height: 20px;
-  }
-  .contact .form .formblock {
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    padding: 13px 13px;
-    width: calc( 100% - 80px);
-  }
-  .contact .form .formblock__input {
-    width: 100%;
-  }
-  .contact .form .formblock__radio {
-    width: 100%;
-  }
-  .contact .form .formblock__button {
-    width: 100%;
-    padding: 14px 0;
-  }
-  .contact .form .formblock__button--submit {
-    margin-bottom: 10px;
-  }
-  .contact .form .formblock--button {
-    flex-direction: column-reverse;
-  }
-  .footer {
-    background-color: #E3E3E3;
+  .breadcrumbs {
+    padding: 16px 0 16px 30px;
   }
 }
-/*# sourceMappingURL=contact.css.map */
+
+.banner {
+  background: url(https://www.kobayashi.com.tw/images/qa/banner_img.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-position: 100% 0%;
+  height: 300px;
+  margin: 80px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__title {
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 5px;
+  color: #333333;
+}
+
+.banner__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+@media (max-width: 1500px) and (min-width: 1350px) {
+  .banner {
+    height: 300px;
+  }
+}
+
+@media (max-width: 1349px) and (min-width: 1024px) {
+  .banner {
+    background-attachment: inherit;
+    height: 250px;
+    background-position: 100% 38%;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 960px) {
+  .banner {
+    background-attachment: inherit;
+    height: 250px;
+    background-position: 100% 30%;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 959px) and (min-width: 700px) {
+  .banner {
+    background-attachment: inherit;
+    height: 200px;
+    background-position: 100% 38%;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 960px) {
+  .banner {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    background-attachment: inherit;
+    height: 160px;
+    background-position: 100% 25%;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 961px) {
+  .pc--none {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .mb--none {
+    display: none;
+  }
+  .banner {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    background-attachment: inherit;
+    height: 160px;
+    background-position: 100% 25%;
+    background-size: cover;
+  }
+}
+
+.banner {
+  background-image: url(https://www.kobayashi.com.tw/images/customer/banner_img.jpg);
+}
+
+.content2 {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.content2 .customer-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 1080px;
+  margin: 0 auto;
+  height: auto;
+  grid-gap: 30px;
+}
+
+.content2 .customer-center .customer_box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  padding: 70px 40px 40px 40px;
+  border: 1px solid #ccc;
+  border-top: 3px solid #344154;
+  background-size: auto 100%;
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-image: url(https://www.kobayashi.com.tw/images/customer/box_bg.jpg);
+}
+
+.content2 .customer-center .customer_box .center-left {
+  flex: 1;
+}
+
+.content2 .customer-center .customer_box .center-left .title-en {
+  font-size: 32px;
+  font-weight: 600;
+  color: #6b7a90;
+  font-family: title_en;
+}
+
+.content2 .customer-center .customer_box .center-left .title-ch {
+  font-size: 32px;
+  color: #344154;
+}
+
+.content2 .customer-center .customer_box .center-left .more-box {
+  position: absolute;
+  bottom: 100px;
+  font-weight: 600;
+  color: #477bba;
+  border-bottom: 1px solid #477bba;
+}
+
+.content2 .customer-center .customer_box .center-right {
+  width: 100%;
+  width: 160px;
+  height: 160px;
+}
+
+@media (max-width: 960px) {
+  .content2 {
+    width: 90%;
+    padding: 60px 0;
+    margin: 0 auto;
+  }
+  .content2 .customer-center {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content2 {
+    width: 90%;
+    padding: 60px 0;
+    margin: 0 auto;
+  }
+  .content2 .customer-center {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=kobayashi-customer.css.map */
