@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.kobayashi.com.tw/images/favicon.ico">
-    <link rel="stylesheet" href="/kobayashi/css/contact.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <title>常見問題</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>專業教室</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/classroom.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -206,135 +210,179 @@
             </div>
         </div>
     </header>
-    <div class="banner">
-        <p class="banner__title">CONTACT</p>
-        <p class="banner__subtitle">聯絡我們</p>
-    </div>
-    <div class="breadcrumbs">
-        <div class="breadcrumbs__item"><a href="/kobayashi/index.html"><i class="fas fa-home"></i></a></div>
-        <div class="breadcrumbs__arrow"><i class="fas fa-chevron-right"></i></div>
-        <div class="breadcrumbs__item">
-            <a href="https://www.kobayashi.com.tw/customer.php"><p>顧客專區</p></a>
-        </div>
-        <div class="breadcrumbs__arrow"><i class="fas fa-chevron-right"></i></div>
-        <div class="breadcrumbs__item">
-            <p>聯絡我們</p>
-        </div>
-    </div>
-    <div class="contact">
-        <div class="warn">
-            <div class="warn__icon"><i class="fas fa-exclamation"></i></div>
-            <div class="warn__message">
-                <p>您的意見與反應是我們成長的條件感謝您的愛護與支持，<br>送出後我們將會盡速與您聯絡，謝謝。</p><br>
-                <p class="warn__message--hint">※ 以下欄位皆為必填。</p>
-            </div>
-        </div>
-        <div class="form" id="contactform">
-            <div class="formblock formblock--head">
-                <label class="formblock__tag" for="fullname">姓名</label>
-                <div class="formblock__input">
-                    <input class="formblock__textblock" type="text" id="fullname" required>
-                    <p class="formblock__validation formblock__required">請輸入您的姓名</p>
-                </div>
-            </div>
-            <div class="formblock">
-                <label class="formblock__tag">性別</label>
-                <div class="formblock__input">
-                    <div class="formblock__radio">
-                        <div>
-                            <input type="radio" value="boy" id="boy" name="gender"><label for="boy">先生</label>
-                        </div>
-                        <div>
-                            <input type="radio" value="girl" id="girl" name="gender"><label for="girl">小姐</label>
-                        </div>
-                    </div>
-                    <p class="formblock__validation formblock__required">請選擇您的性別</p>
-                </div>
-            </div>
-            <div class="formblock">
-                <label class="formblock__tag" for="phone">電話</label>
-                <div class="formblock__input">
-                    <input class="formblock__textblock" type="text" id="phone" required>
-                    <p class="formblock__validation formblock__required">請輸入您的聯絡電話</p>
-                </div>
-            </div>
-            <div class="formblock">
-                <label class="formblock__tag" for="email">信箱</label>
-                <div class="formblock__input">
-                    <input class="formblock__textblock" type="email" id="email" required>
-                    <p class="formblock__validation formblock__required">請輸入您的電子信箱</p>
-                    <p class="formblock__validation formblock__errorhint">Email格式錯誤，請重新確認</p>
-                </div>
-            </div>
-            <div class="formblock">
-                <label class="formblock__tag" for="shop">消費店別</label>
-                <div class="formblock__input">
-                    <div class="formblock__textblock formblock__textblock--select">
-                        <select class="formblock__select formblock__select--blocktwo" id="area" name="area" required></select>
-                        <select class="formblock__select formblock__select--blocktwo" id="shop" name="shop" required>
-                            <option value="">請選擇門市</option>
-                        </select>
-                    </div>
-                    <p class="formblock__validation formblock__required">請選擇消費店別</p>
-                </div>
-            </div>
-            <div class="formblock">
-                <label class="formblock__tag">消費日期</label>
-                <div class="formblock__input">
-                    <div>
-                        <div class="formblock__textblock formblock__textblock--select">
-                            <select class="formblock__select formblock__select--blockthree" id="year" name="year" required>
-                                <option value="">年</option>
-                            </select>
-                            <select class="formblock__select formblock__select--blockthree" id="month" name="month" required>
-                                <option value="">月</option>
-                            </select>
-                            <select class="formblock__select formblock__select--blockthree" id="date" name="date" required>
-                                <option value="">日</option>
-                            </select>
-                        </div>
-                    </div>
-                    <p class="formblock__validation formblock__required">請選擇消費日期</p>
-                </div>
-            </div>
-            <div class="formblock">
-                <label class="formblock__tag">消費類別</label>
-                <div class="formblock__input">
-                    <div class="formblock__textblock formblock__textblock--select">
-                        <select class="formblock__select" id="product" required>
-                            <option value="">請選擇分類</option>
-                        </select>
-                    </div>
-                    <p class="formblock__validation formblock__required">請選擇消費類別</p>
-                </div>
-            </div>
-            <div class="formblock">
-                <label class="formblock__tag" for="message">留言</label>
-                <div class="formblock__input">
-                    <textarea class="formblock__textblock formblock__textblock--message" rows="10" cols="81" id="message"
-                    required></textarea>
-                    <p class="formblock__validation formblock__required">請輸入留言內容</p>
-                </div>
-            </div>
-            <div class="formblock">
-                <label class="formblock__tag">打勾後完成驗證
-                    <div class="form__sign--arrow">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </label>
-                <div class="g-recaptcha" data-sitekey="6LexEYYcAAAAAHroNR97AtV6cyVkjKAOWjnfeIk8"></div>
-            </div>
-            <div class="formblock formblock--button">
-                <input class="formblock__button" id="resetBtn" type="submit" value="清除重填">
-                <input class="formblock__button formblock__button--submit" id="submitBtn" type="submit" value="確認送出">
-            </div>
 
+    <div class="banner">
+        <p class="banner__title">CLASSROOM</p>
+        <p class="banner__subtitle">專業教室</p>
+    </div>
+
+    <div class="breadcrumbs">
+        <a href="index.html"><i class="fas fa-home breadcrumbs__item"></i></a>
+        <i class="fas fa-angle-right breadcrumbs__arrow"></i>
+        <a href="classroom.html">
+            <p>專業教室</p>
+        </a>
+        <i class="fas fa-angle-right breadcrumbs__arrow"></i>
+        <p>視力保健教室</p>
+    </div>
+
+    <div class="lesson__box">
+        <div class="lesson">
+            <p class="lesson__bigtitle">視力保健教室<span style="color:#089e78; margin:0 0 0 10px;">VISION CARE</span></p>
+            <p id="old" class="lesson__title">中、老年人視力保健問題</p>
+
+            <div class="line"></div>
+
+            <h4 class="lesson__subtitle"><span>中老年人為什麼需要戴眼鏡</span></h4>
+
+            <p class="lesson__content">
+                根據醫學統計，一般東方人在超過40歲以後，由於身體各器官已逐漸呈現衰退現象，眼睛也因為水晶體彈性衰退，調節視力的能力不足，而產生初期看近物會感到吃力，後期即看不清楚近物，而形成老花，如果您有下列徵狀，表示您需要戴老花眼鏡或漸進多焦點鏡片，請稍加留意。
+            </p>
+
+            <ol class="lesson__list">
+                <li><span>看報拿得遠遠的才能看得清楚。</span></li>
+                <li><span>白天視力比晚間好，光線不足時覺得吃力。</span></li>
+                <li><span>近處看細小的字覺得吃力。</span></li>
+                <li><span>閱讀時，眼睛容易疲勞或掉淚，並有肩膀硬、頭痛、噁心眩暈的症狀。</span></li>
+                <li><span>閱讀不久後，發現視力模糊不清。</span></li>
+            </ol>
+
+            <h4 class="lesson__subtitle"><span>重視40歲以後的視力</span></h4>
+
+            <p class="lesson__content">一般人步入40歲後，視力會逐漸衰退，且易患眼睛疾病，以內障類較多。內障疾病可分三種，有綠內障(青光眼)、黑內障、白內障，其中老年人最容易罹患的就是白內障。</p>
+
+            <h4 class="lesson__subtitle"><span>發生現象</span></h4>
+
+            <p class="lesson__content">
+                初期水晶體會有異狀，眼睛很容易勞，眼睛並會產生飛蚊症狀，就是閉上一隻眼睛看東西會有物像重疊的現象，然後，眼睛漸漸模糊，老花眼度數減低，以致於無法配到合適的老花眼鏡，這種現象由初期到形成快則1~3年，慢則5~6年，同時要注意糖尿病、睫狀體發炎等等併發症。<br />
+                因此，一到中年，如有眼睛流淚、眼睛模糊、疼痛或頭痛、血厭高等情形，應定期接受眼科醫師檢查。我們已知40歲以後的視力已逐漸衰退，因此，在生活上及工作上要注意：</p>
+
+            <ol class="lesson__list">
+                <li><span>增加照明度，請用燭光較大的燈泡，尤其是書桌上的閱讀，光線更需充足。</span></li>
+                <li><span>開車時，保持適當的速度並稍作休息。</span></li>
+                <li><span>避免烈陽暴曬，請戴上太陽眼鏡。</span></li>
+                <li><span>防止眼睛疲勞，請多休息。</span></li>
+            </ol>
+
+            <h4 class="lesson__subtitle"><span>防止視力老化的保健方法</span></h4>
+
+            <ol class="lesson__list">
+                <li><span>常常上下左右地轉動眼珠，並多眨眨眼。</span></li>
+                <li><span>在某特定點上，集中注視。</span></li>
+                <li><span>所有的閱讀或近處工作，一定得要與眼睛保持14吋(學36.5cm)的距離，同時要常常眨眼和集中注視每個</span><span>字上。</span></li>
+                <li><span>一天需花半個小時以上做以上各項訓練。</span></li>
+                <li><span>如老花視力突然好轉，度數減輕並非正常現象，可能是眼疾前兆，速找醫師診治。</span>
+                </li>
+            </ol>
+
+            <img class="oblique＿line" src="https://www.kobayashi.com.tw/images/profession/html_line.jpg" alt="">
+
+            <p id="myopia" class="lesson__title">防止近視的保健方式</p>
+
+            <div class="line"></div>
+
+            <h4 class="lesson__subtitle">營養均衡</h4>
+
+            <ol class="lesson__list">
+                <li>適當攝取五大營養，含糖高的食物少吃。</li>
+                <li>多吃新鮮蔬菜，不可偏食。</li>
+            </ol>
+
+            <h4 class="lesson__subtitle">姿勢端正</h4>
+
+            <ol class="lesson__list">
+                <li>看書時保持30公分的距離。</li>
+                <li>不可躺著看書。</li>
+                <li>讀書或工作，請30分鐘休息5分鐘。</li>
+                <li>選擇印刷良好，字體適中的書籍，並使用較深顏色的鉛筆。</li>
+                <li>定期調整桌椅高度，桌子必須與手肘同高，雙腳必須踏到地板。</li>
+            </ol>
+
+            <h4 class="lesson__subtitle">收看電視注意事項</h4>
+
+            <ol class="lesson__list">
+                <li>保持兩公尺以上或畫面對角線保持6~8倍距離。</li>
+                <li>以不超過一小時為準，最好每30分鐘休息10分鐘。</li>
+                <li>室內光線要充足，不可明暗相差太大。</li>
+                <li>不可躺著看電視。螢幕稍低於水平視線，且不要太偏角度，最好在30度內。</li>
+            </ol>
+
+            <h4 class="lesson__subtitle">注意採光</h4>
+
+            <ol class="lesson__list">
+                <li>眼睛最舒適最清楚的亮度是40~50瓦特的電燈或20瓦日光燈。</li>
+                <li>請常擦拭燈管、燈泡，以免灰塵影響照明度。</li>
+            </ol>
+
+            <h4 class="lesson__subtitle">其它注意事項</h4>
+
+            <ol class="lesson__list">
+                <li>充分睡眠及戶外活動。時常集中精神眺望遠方目標。</li>
+                <li>每3~6個月或一年兩次視力檢查。</li>
+                <li>近視400度以下者，只在上課或平常時戴，長時間閱讀不必載，500度以上者最好能有兩副眼鏡，閱讀時可使用度數較淺的眼鏡。漸近多焦鏡片是一副眼鏡同時適合遠、中、近距離的最好選擇。
+                </li>
+            </ol>
+
+            <h4 class="lesson__subtitle">早日發現近視的各種現象與方法</h4>
+
+            <ol class="lesson__list">
+                <li>頭往前傾看遠處，或看遠物時會瞇著眼睛。</li>
+                <li>眼睛與書本過近。</li>
+                <li>不能集中精神讀書、做功課，學業退步。</li>
+                <li>在近處看電視。</li>
+                <li>頸項側彎，側著看東西。</li>
+                <li>經常揉眼睛、有畏光情形。</li>
+                <li>常抱怨眼睛累或頭痛。</li>
+            </ol>
+
+            <h4 class="lesson__subtitle">自己測驗是否近視了？</h4>
+
+            <ol class="lesson__list">
+                <li>望遠發現法從固定的地方，決定視力所及的遠方目標，經常看它以測定自己視力狀態。</li>
+                <li>明暗發現法：
+                    <ul>
+                        <li>隨雨天或黃昏時，視線會較差，如果有近視傾向者，視力會大幅度降低。</li>
+                    </ul>
+                </li>
+                <li>小孔發現法：
+                    <ul>
+                        <li>視力正常者無法透過小孔看清物體，反之，近視者能透過小孔將遠方細小目標看得清楚。</li>
+                    </ul>
+                </li>
+                <li>眼睛疲勞發現法：
+                    <ul>
+                        <li>剛開始近視者無法持續閱讀一小時，如果視力惡化、眼睛會疲勞、模糊、眼瞼澀重。</li>
+                    </ul>
+                </li>
+                <li>單眼發現法：
+                    <ul>
+                        <li>用單眼交互看月曆或視力檢查表(距離約3~4公尺)。如自己感覺有近視現象時，應由專業眼鏡公司為您複檢。</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4 class="lesson__subtitle">近視如何矯正？</h4>
+
+            <ol class="lesson__list">
+                <li>凹透鏡型的鏡片可以使光線更精確的落在視網膜上，獲得更清晰的影像。</li>
+                <li>依近視的程度而決定是否需要配戴框架眼鏡或隱形眼鏡，以保持清晰的視力。</li>
+                <li>如果需要配戴矯正用的隱形眼鏡或框架眼鏡，可能需要適應一下配戴後的生活。</li>
+            </ol>
+        </div>
+
+        <div class="sidebar">
+            <p class="sidebar__title">快速選單<span>MENU</span></p>
+            <div class="sidebar__anchor">
+                <a href="#old">
+                    <p class="sidebar__anchor--content">中、老年人視力保健問題<i class="fas fa-angle-right icon"></i></p>
+                </a>
+            </div>
+            <div class="sidebar__anchor">
+                <a href="#myopia" class="sidebar__anchor--content">防止近視的保健方式<i class="fas fa-angle-right icon"></i></a>
+            </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/contact.js"></script>
+
     <footer class="footer">
         <nav class="footer__map">
             <div class="align-center map_mb">
@@ -352,10 +400,12 @@
             <div class="align-center map_mb--r">
                 <span class="map_app mb-none">小林眼鏡 APP下載</span>
                 <div class="mapapp__box">
-                    <a class="mapapp__app" href="https://play.google.com/store/apps/details?id=tw.com.kobayashi.app&hl=zh_TW">
+                    <a class="mapapp__app"
+                        href="https://play.google.com/store/apps/details?id=tw.com.kobayashi.app&hl=zh_TW">
                         <img src="https://www.kobayashi.com.tw/images/google.png" alt="Google Play">
                     </a>
-                    <a class="mapapp__app" href="https://itunes.apple.com/tw/app/%E5%B0%8F%E6%9E%97%E7%9C%BC%E9%8F%A1/id1081723764?mt=8">
+                    <a class="mapapp__app"
+                        href="https://itunes.apple.com/tw/app/%E5%B0%8F%E6%9E%97%E7%9C%BC%E9%8F%A1/id1081723764?mt=8">
                         <img src="https://www.kobayashi.com.tw/images/ios.png" alt="Apple Store">
                     </a>
                 </div>
@@ -383,8 +433,8 @@
             </ul>
             <div class="line-h">
                 <p class="list__item--sm text-center border-none bodr-n">7F., No.97, Sec. 2, Nangang Rd., Nangang Dist.,
-                <br class="pc-none">
-                Taipei City 115,Taiwan (R.O.C)
+                    <br class="pc-none">
+                    Taipei City 115,Taiwan (R.O.C)
                 </p>
             </div>
             <ul>
@@ -395,7 +445,7 @@
             <p class="copyright">
                 Copyright © 2017 Kobayashi Optical Co.,Ltd.
                 <span class="bold">
-                     DESIGN BY BEGONIA
+                    DESIGN BY BEGONIA
                 </span>
             </p>
         </nav>
@@ -406,10 +456,12 @@
                 <img src="https://www.kobayashi.com.tw/images/top.png" alt="">
             </a>
             <a class="icon-md top-btn-icon" href="#">
-                <img src="https://s3-ap-southeast-1.amazonaws.com/caas-media-storage/upload/photos/user-upload-photo/b282b804-525a-44ab-870b-554f6ec8593e-f6bdda852d174602bf73d9c2e63203b8.png" alt="">
+                <img src="https://s3-ap-southeast-1.amazonaws.com/caas-media-storage/upload/photos/user-upload-photo/b282b804-525a-44ab-870b-554f6ec8593e-f6bdda852d174602bf73d9c2e63203b8.png"
+                    alt="">
             </a>
         </div>
     </footer>
+
     <script src="js/header.js"></script>
 </body>
 

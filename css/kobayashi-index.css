@@ -1,3 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -434,211 +453,6 @@
   }
 }
 
-.banner {
-  background: url(https://www.kobayashi.com.tw/images/profession/banner_img.jpg) no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  background-attachment: fixed;
-  background-size: 100% auto;
-  background-position: 100% 0%;
-  height: 300px;
-  margin: 80px 0 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner__title {
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 5px;
-  color: #333333;
-}
-
-.banner__subtitle {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-  letter-spacing: 2px;
-  margin-top: 8px;
-}
-
-@media (max-width: 1500px) and (min-width: 1350px) {
-  .banner {
-    height: 300px;
-  }
-}
-
-@media (max-width: 1349px) and (min-width: 1024px) {
-  .banner {
-    background-attachment: inherit;
-    height: 250px;
-    background-position: 100% 38%;
-    background-size: cover;
-  }
-}
-
-@media (max-width: 1023px) and (min-width: 960px) {
-  .banner {
-    background-attachment: inherit;
-    height: 250px;
-    background-position: 100% 30%;
-    background-size: cover;
-  }
-}
-
-@media (max-width: 959px) and (min-width: 700px) {
-  .banner {
-    background-attachment: inherit;
-    height: 200px;
-    background-position: 100% 38%;
-    background-size: cover;
-  }
-}
-
-@media (max-width: 960px) {
-  .banner {
-    margin-top: 60px;
-  }
-}
-
-@media (max-width: 700px) {
-  .banner {
-    background-attachment: inherit;
-    height: 160px;
-    background-position: 100% 25%;
-    background-size: cover;
-  }
-}
-
-@media (min-width: 961px) {
-  .pc--none {
-    display: none;
-  }
-}
-
-@media (max-width: 960px) {
-  .mb--none {
-    display: none;
-  }
-  .banner {
-    margin-top: 60px;
-  }
-}
-
-@media (max-width: 700px) {
-  .banner {
-    background-attachment: inherit;
-    height: 160px;
-    background-position: 100% 25%;
-    background-size: cover;
-  }
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/
- v2.0 | 20110126
- License: none (public domain)*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  box-sizing: border-box;
-}
-
-a, a:hover {
-  text-decoration: none;
-  color: #4D4D4D;
-}
-
-.breadcrumbs {
-  width: 100%;
-  background: #e8ebee;
-  padding: 20px 0 20px 140px;
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumbs__item {
-  color: #999999;
-  margin: 0 10px;
-}
-
-.breadcrumbs__item a:link, .breadcrumbs__item a:visited {
-  text-decoration: none;
-  color: #999999;
-}
-
-.breadcrumbs__item p {
-  color: #666;
-  font-size: 14px;
-}
-
-.breadcrumbs__arrow {
-  color: #999999;
-}
-
-@media (min-width: 960.1px) and (max-width: 1350px) {
-  .breadcrumbs {
-    padding: 20px 0 20px 10vw;
-  }
-}
-
-@media (min-width: 700.1px) and (max-width: 960px) {
-  .breadcrumbs {
-    padding: 16px 0 16px 40px;
-  }
-}
-
-@media (max-width: 700px) {
-  .breadcrumbs {
-    padding: 16px 0 16px 30px;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -869,316 +683,656 @@ i.icon--circle {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Microsoft JhengHei;
-}
-
-html {
-  overflow: scroll;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-  /* make scrollbar transparent */
-}
-
-.banner {
-  background: url(https://www.kobayashi.com.tw/images/contact/banner_img.jpg);
-}
-
-body {
-  background: #e3e3e3;
-}
-
-.contact {
-  background: white;
-  width: 1080px;
-  margin: 0 auto;
-  padding: 50px 0px;
-}
-
-.contact .warn {
-  background: #e3e3e3;
-  width: calc( 100% - 100px);
-  margin: 0 auto 40px;
-  padding: 40px;
-  display: flex;
-}
-
-.contact .warn__icon {
-  font-size: 35px;
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  color: white;
-  background: #FC798F;
-  text-align: center;
-  line-height: 80px;
-  font-weight: 100;
-}
-
-.contact .warn__message {
-  margin-left: 40px;
-  font-size: 13px;
-  color: #666;
-  line-height: 23px;
-}
-
-.contact .warn__message--hint {
-  color: #fe5959;
-}
-
-.contact .form .formblock {
-  display: flex;
-  justify-content: space-between;
-  width: calc( 100% - 100px);
-  padding: 30px 60px;
-  border-top: 1px solid #dedede;
-  margin: 0 auto;
-}
-
-.contact .form .formblock--head {
-  border-top: 1px dotted #dedede;
-}
-
-.contact .form .formblock--button {
-  border-top: 1px solid #dedede00;
-}
-
-.contact .form .formblock__tag {
-  color: #666;
-  font-size: 15px;
-  text-align: center;
-  line-height: 30px;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-.contact .form .formblock__input {
-  width: 750px;
-}
-
-.contact .form .formblock__textblock {
-  border: 1px solid #e3e3e3;
-  height: 30px;
-  padding: 0 5px;
-  color: #666;
-  font-size: 16px;
+.breadcrumbs {
   width: 100%;
-}
-
-.contact .form .formblock__textblock--select {
+  background: #e8ebee;
+  padding: 20px 0 20px 140px;
   display: flex;
-  padding: 0;
-  border: none;
-  justify-content: space-between;
+  align-items: center;
 }
 
-.contact .form .formblock__textblock--message {
-  height: 210px;
-  resize: none;
-  padding: 5px;
+.breadcrumbs__item {
+  color: #999999;
+  margin: 0 10px;
 }
 
-.contact .form .formblock__validation {
-  margin-left: 10px;
-  margin-top: 3px;
-  letter-spacing: 2px;
-  font-size: 11px;
-  line-height: 23px;
-  color: #FC798F;
-}
-
-.contact .form .formblock__required {
-  display: none;
-}
-
-.contact .form .formblock__required--active {
-  display: block;
-}
-
-.contact .form .formblock__errorhint {
-  display: none;
-}
-
-.contact .form .formblock__errorhint--active {
-  display: block;
-}
-
-.contact .form .formblock__select {
-  -webkit-appearance: none;
-  border: 1px solid #e3e3e3;
-  height: 30px;
-  width: 100%;
-  padding: 0 0 0 5px;
+.breadcrumbs__item p {
+  color: #666;
   font-size: 14px;
-  color: #666;
-  letter-spacing: 1px;
-  cursor: pointer;
 }
 
-.contact .form .formblock__select::-webkit-scrollbar {
-  display: none;
-}
-
-.contact .form .formblock__select--blocktwo {
-  width: calc( 98%/2);
-}
-
-.contact .form .formblock__select--blockthree {
-  width: calc( 96%/3);
-}
-
-.contact .form .formblock__radio {
-  display: flex;
-  width: 750px;
-}
-
-.contact .form .formblock__radio label {
-  display: inline-block;
-  margin: 0 40px 0 10px;
-  line-height: 30px;
-  color: #666;
-  font-size: 15px;
-  letter-spacing: 2px;
-}
-
-.contact .form .formblock__button {
-  width: 49%;
-  color: gray;
-  background: #787878;
-  border: none;
-  color: white;
-  padding: 12px 0;
-}
-
-.contact .form .formblock__button--submit {
-  background: #343434;
-}
-
-.contact .form__sign--arrow {
-  display: flex;
-  width: 80px;
-  height: 30px;
-  position: absolute;
-  left: 50px;
-  top: 7px;
-  animation: arrow 1s ease-out infinite;
-}
-
-.contact .form__sign--arrow div {
-  width: 11px;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 50% 50%, 0% 0%);
-  background: #5282C2;
-  height: 15px;
-}
-
-@keyframes arrow {
-  0%, 100% {
-    left: 145px;
-  }
-  50% {
-    left: 150px;
-  }
-}
-
-@media (min-width: 1350.1px) and (max-width: 1500px) {
-  .contact {
-    width: 880px;
-    padding: 40px 0px;
-  }
-  .contact .form .formblock {
-    padding: 30px 40px;
-    width: calc( 100% - 80px);
-  }
-  .contact .form .formblock__input {
-    width: 600px;
-  }
+.breadcrumbs__arrow {
+  color: #999999;
 }
 
 @media (min-width: 960.1px) and (max-width: 1350px) {
-  .contact {
-    width: 880px;
-    padding: 40px 0px;
-  }
-  .contact .form .formblock {
-    padding: 30px 40px;
-    width: calc( 100% - 80px);
-  }
-  .contact .form .formblock__input {
-    width: 600px;
+  .breadcrumbs {
+    padding: 20px 0 20px 10vw;
   }
 }
 
 @media (min-width: 700.1px) and (max-width: 960px) {
-  .contact {
-    width: 680px;
-    padding: 40px 0px;
-  }
-  .contact .form .formblock {
-    padding: 30px 40px;
-    width: calc( 100% - 80px);
-  }
-  .contact .form .formblock__input {
-    width: 400px;
-  }
-  .footer {
-    background-color: #E3E3E3;
+  .breadcrumbs {
+    padding: 16px 0 16px 40px;
   }
 }
 
 @media (max-width: 700px) {
-  .contact {
-    width: 95%;
-    padding: 40px 0px;
-  }
-  .contact .warn {
-    margin: 0 auto 20px;
-    padding: 20px;
-    width: calc( 100% - 50px);
-  }
-  .contact .warn__icon {
-    font-size: 16px;
-    height: 35px;
-    width: 35px;
-    border-radius: 45px;
-    line-height: 35px;
-  }
-  .contact .warn__message {
-    font-size: 12px;
-    margin-left: 20px;
-    width: calc( 100% - 65px);
-    line-height: 20px;
-  }
-  .contact .form .formblock {
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    padding: 13px 13px;
-    width: calc( 100% - 80px);
-  }
-  .contact .form .formblock__input {
-    width: 100%;
-  }
-  .contact .form .formblock__radio {
-    width: 100%;
-  }
-  .contact .form .formblock__button {
-    width: 100%;
-    padding: 14px 0;
-  }
-  .contact .form .formblock__button--submit {
-    margin-bottom: 10px;
-  }
-  .contact .form .formblock--button {
-    flex-direction: column-reverse;
-  }
-  .footer {
-    background-color: #E3E3E3;
+  .breadcrumbs {
+    padding: 16px 0 16px 30px;
   }
 }
-/*# sourceMappingURL=contact.css.map */
+
+.banner {
+  background: url(https://www.kobayashi.com.tw/images/qa/banner_img.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-position: 100% 0%;
+  height: 300px;
+  margin: 80px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__title {
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 5px;
+  color: #333333;
+}
+
+.banner__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+@media (max-width: 1500px) and (min-width: 1350px) {
+  .banner {
+    height: 300px;
+  }
+}
+
+@media (max-width: 1349px) and (min-width: 1024px) {
+  .banner {
+    background-attachment: inherit;
+    height: 250px;
+    background-position: 100% 38%;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 960px) {
+  .banner {
+    background-attachment: inherit;
+    height: 250px;
+    background-position: 100% 30%;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 959px) and (min-width: 700px) {
+  .banner {
+    background-attachment: inherit;
+    height: 200px;
+    background-position: 100% 38%;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 960px) {
+  .banner {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    background-attachment: inherit;
+    height: 160px;
+    background-position: 100% 25%;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 961px) {
+  .pc--none {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .mb--none {
+    display: none;
+  }
+  .banner {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    background-attachment: inherit;
+    height: 160px;
+    background-position: 100% 25%;
+    background-size: cover;
+  }
+}
+
+.searchBar::before, .searchBar__cancel::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBar::before {
+  content: "\f002";
+  font-size: 16px;
+  color: #000;
+}
+
+.searchBar__cancel::after {
+  content: "\f00d";
+  font-size: 32px;
+  background: #2e2e2e;
+  color: #fff;
+}
+
+.searchBar__input {
+  width: calc( 100% - 90px);
+  height: 16px;
+  border: 0;
+  margin-right: 10px;
+  border-left: 1px solid #afafaf;
+  padding-left: 5px;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+.mobileMenu {
+  width: 100%;
+}
+
+.header__mobileBtn, .header__subMenu-member, .header__subMenu-cart, .searchBar__cancel {
+  cursor: pointer;
+}
+
+.socialIcon {
+  margin-top: 30px;
+}
+
+.socialIcon__download, .socialIcon__links {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: 30%;
+  margin-top: 80px;
+}
+
+.carousel__main {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -111;
+}
+
+.carousel__img {
+  width: 100vw;
+}
+
+.carousel__arrow--left, .carousel__arrow--right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.carousel__arrow--left {
+  left: 16px;
+}
+
+.carousel__arrow--right {
+  right: 16px;
+}
+
+.carousel__dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.dot.full {
+  background-color: none;
+  border: 2px solid white;
+}
+
+.list__item--sm:first-of-type {
+  border: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sectionMain {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.opticalLists, .newsLists {
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optical__item {
+  margin: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  flex: 1;
+}
+
+.optical__img {
+  width: 200px;
+}
+
+.text-tf {
+  transition: transform 1s ease;
+}
+
+.text-tf:hover {
+  transform: scale(1.1);
+}
+
+.title {
+  display: inline-flex;
+  flex-direction: column;
+  color: #4d4d4d;
+  letter-spacing: 2px;
+  font-size: 45px;
+  font-weight: 600;
+  position: relative;
+}
+
+.title span {
+  color: #999;
+  font-size: 18px;
+}
+
+.title i {
+  color: #005bac;
+  font-size: 60px;
+}
+
+.title::before {
+  content: 'Fast!';
+  font-size: 34px;
+  color: #009b74;
+}
+
+.title--media::before {
+  content: 'Video!';
+}
+
+.title--news::before {
+  content: 'Hot!';
+}
+
+.ad {
+  width: 100%;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  text-align: left;
+  background-image: url("https://www.kobayashi.com.tw/images/index/con3bg.jpg");
+}
+
+.ad .ad_center {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.ad--media {
+  background-image: url("https://www.kobayashi.com.tw/images/index/con5bg_new.jpg");
+  text-align: right;
+}
+
+.scrolldown {
+  margin-bottom: 40px;
+}
+
+.sectionMain--news {
+  background: #f2f2f2;
+  padding-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  width: 1280px;
+  margin: auto;
+}
+
+.news__item {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 10px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.news__cover, .news__icon {
+  width: 100%;
+  height: 170px;
+}
+
+.news__icon {
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  opacity: 0;
+  transition: .5s;
+  background: rgba(223, 224, 226, 0.95);
+}
+
+.news__item:hover .news__icon {
+  opacity: 1;
+}
+
+.news__icon svg {
+  width: 80px;
+}
+
+.news__content {
+  padding: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.news__content--icon {
+  content: '';
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  background: #e8e8e8;
+  border-radius: 50%;
+  color: #005bac;
+}
+
+.news__content--date {
+  font-weight: 600;
+  color: #01957f;
+  display: block;
+}
+
+.news__content--date:after {
+  content: '';
+  display: block;
+  max-width: 0px;
+  width: 100%;
+  height: 2px;
+  background: #ffc219;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+.news__item:hover .news__content--date:after {
+  max-width: 200px;
+}
+
+.news__item:hover .news__content--icon {
+  color: #e8e8e8;
+  background: #005bac;
+}
+
+.more {
+  width: 150px;
+  display: block;
+  margin: 50px auto 80px auto;
+  padding: 10px 0;
+  color: #4d4d4d;
+  font-size: 13px;
+  border: 1px dotted #666;
+  border-radius: 50px;
+}
+
+.more:hover {
+  width: 200px;
+  transition: 1s;
+}
+
+.text--white {
+  color: #fff;
+}
+
+.text--dark {
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 900;
+}
+
+.text--en {
+  font-size: 8px;
+  letter-spacing: 3px;
+  opacity: 0.58;
+}
+
+.z-index-text {
+  z-index: 1;
+}
+
+.img {
+  width: 100%;
+}
+
+.img--icon {
+  max-width: 35px;
+}
+
+.icon {
+  font-size: 25px;
+  margin: 8px 0;
+  color: #fff;
+}
+
+.icon--black {
+  color: #000;
+}
+
+.icon--sm {
+  font-size: 20px;
+}
+
+i.icon--circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.btn {
+  display: block;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.btn--main {
+  background: #278a88;
+  color: #fff;
+}
+
+.top-btn {
+  position: fixed;
+  right: 2vh;
+  bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.top-btn .icon-md {
+  width: 80px;
+  height: 80px;
+}
+
+.top-btn .top-btn-icon {
+  margin-top: 10px;
+}
+
+.top-btn .top-btn-icon img {
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  * {
+    font-size: 0.95rem;
+  }
+  .header {
+    height: 60px;
+  }
+  .header__logo {
+    width: 120px;
+    margin: auto 15px;
+  }
+  .header__subMenu-member, .header__subMenu-cart {
+    width: 80px;
+    height: 80px;
+  }
+  .header__subMenu-search, .menu__item {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 959px) {
+  * {
+    font-size: 0.88rem;
+  }
+  .header__logo {
+    margin: auto 5px;
+  }
+  .menu__item {
+    padding: 0 8px;
+  }
+}
+
+@media (min-width: 769px) {
+  .pc-none {
+    display: none;
+  }
+  .footer__main {
+    background: #ebebeb;
+  }
+  .footer__sub {
+    background: #bbb;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__mobileBtn, .header__subMenu-cart {
+    width: 60px;
+    height: 60px;
+  }
+  .mb-none {
+    display: none;
+  }
+  .border-none {
+    border: 0;
+  }
+  .opticalLists {
+    flex-direction: column;
+  }
+  .carousel {
+    margin-top: 60px;
+  }
+  .carousel__arrow--left, .carousel__arrow--right {
+    font-size: 25px;
+  }
+  .card {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .ad {
+    padding: 80px 20px;
+  }
+  .footer__main {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 150px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .footer {
+    position: relative;
+  }
+  .copyright {
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+  }
+  .footer__sub {
+    padding-bottom: 100px;
+  }
+}
+/*# sourceMappingURL=kobayashi-index.css.map */
