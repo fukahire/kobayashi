@@ -65,6 +65,7 @@ $(function(){
     arrowLeft.click(function(){
         sliderLeft();
     })
+})
 
 
 
@@ -72,42 +73,10 @@ $(function(){
    
 
 
-    // 按鈕樣式改變
-        // $(".btn").click(function(){
-        //     $(this).addClass("btn--active").siblings().removeClass("btn--active");
-        // })
+// 按鈕樣式改變
 
-
-    // // 點選光學鏡框/太陽眼鏡/隱形眼鏡/保健食品顯示不同內容
-    //     let page__glasses = $(".page__glasses");
-    //     let page__sunglasses = $(".page__sunglasses");
-
-    //     $(".tab2").click(function(){
-    //         page__glasses.addClass("hide");
-    //         $(".formBlock-sun-second").addClass("hide");
-    //         $(".page__contactLens--colored").addClass("hide");
-    //     })
-    //     $(".pagebutton__number-two").click(function(){
-    //         $(".formBlock-sun-first").addClass("hide");
-    //     })
-    //     $(".tab1").click(function(){
-    //         page__glasses.addClass("show");
-    //     })
-    //     $(".tab4").click(function(){
-    //         $(".page__contactLens--colored").addClass("show");
-    //     })
-
-
-        
-    //         // 清除篩選條件icon旋轉
-    //         $(".searchSet__icon").on('click', function () {
-    //             $(".searchSet__icon").addClass("searchSet__icon--rotate");
-    //             setTimeout(function () {
-    //                 $(".searchSet__icon").removeClass("searchSet__icon--rotate");
-    //             }, 1100)
-    //             $(".catalog__checkbox").prop("checked", false)
-    //         })
-      
+$(".pageBtn").click(function(){
+    $(this).addClass("btn--active").siblings().removeClass("btn--active");
 })
 
 

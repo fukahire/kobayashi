@@ -1,4 +1,14 @@
 
+// 小賴部分
+@import '_style__catalog__product__top'
+
+// header & footer
+@import '_header'
+@import '_footer'
+
+// banner區域
+@import '_variable+banner'
+
 *
     margin: 0
     padding: 0
@@ -286,7 +296,7 @@ main
             .page__buttons
                 display: flex
                 justify-content: center
-                .btn
+                .pageBtn
                     border: 1px solid $color__grayscale--light
                     width: 25px
                     height: 25px
@@ -303,7 +313,7 @@ main
             .prev-button, .next-button
                 font-size: 18px
 
-@import style__catalog__product__top
+
 
 
 // 麵包屑
@@ -338,3 +348,115 @@ main
 @media (max-width: 700px)
     .breadcrumbs
         padding: 16px 0 16px 30px
+
+
+
+
+// 輪播圖
+
+.searchBar::before,.searchBar__cancel::after
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+    width: 45px
+    height: 45px
+    display: flex
+    align-items: center
+    justify-content: center
+
+// 僞元素icon設定
+.searchBar::before
+    content: "\f002"
+    font-size: 16px
+    color: #000
+
+.searchBar__cancel::after
+    content: "\f00d"
+    font-size: 32px
+    background: #2e2e2e
+    color: #fff
+
+// 手機搜尋輸入欄設定
+.searchBar__input
+    width: calc( 100% - 90px )
+    height: 16px
+    border: 0
+    margin-right: 10px
+    border-left: 1px solid #afafaf
+    padding-left: 5px
+    font-size: 12px
+    background-color: transparent
+
+.mobileMenu
+    // padding: 20px
+    width: 100%
+
+
+// 滑鼠指標
+.header__mobileBtn,.header__subMenu-member,.header__subMenu-cart,.searchBar__cancel
+    cursor: pointer
+
+// 手機icon區塊
+.socialIcon
+    margin-top: 30px
+
+.socialIcon__download,.socialIcon__links
+    display: grid
+    grid-auto-flow: column
+    gap: 15px
+    justify-content: center
+    margin-bottom: 20px
+
+
+
+// banner區塊輪播圖carousel設定
+.carousel
+    position: relative
+    overflow-x: hidden
+    overflow-y: hidden
+    padding-bottom: 30%
+    margin-top: 80px
+    // z-index: -1
+
+.carousel__main
+    display: flex
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -111
+
+.carousel__img
+    width: 100vw
+     
+    
+.carousel__arrow--left,.carousel__arrow--right
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 60px
+    color: #fff
+    cursor: pointer
+
+.carousel__arrow--left
+    left: 16px   
+
+.carousel__arrow--right
+    right: 16px 
+
+.carousel__dots
+    display: flex
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 10px
+
+.dot
+    width: 20px
+    height: 20px
+    margin: 0 5px
+    background-color: rgba(255, 255, 255, 0.7)
+    border-radius: 50%
+
+.dot.full
+    background-color: none
+    border: 2px solid white
+    // background-color: #333
