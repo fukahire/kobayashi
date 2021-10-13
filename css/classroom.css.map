@@ -5,7 +5,8 @@
         "../scss/classroom.sass",
         "../scss/_reset.sass",
         "../scss/_header.sass",
-        "../scss/_variable+banner.sass"
+        "../scss/_variable+banner.sass",
+        "../scss/_breadcrumbs.sass"
     ],
     "names": [],
     "file": "classroom.css"
