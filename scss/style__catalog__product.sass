@@ -4,7 +4,7 @@
 
 // header & footer
 @import '_header'
-@import '_footer'
+@import 'footer'
 
 // banner區域
 @import '_variable+banner'
@@ -119,8 +119,8 @@ main
     // 所有商品/限定活動
     .products__content
         z-index: -100
-        // margin: 0 auto
-        // @include flexbox(column)
+        max-width: 1280px
+        margin: auto
         .content__center
             // width: 880px
             margin: 0 auto
@@ -133,54 +133,7 @@ main
             @include mobile820
                 padding: 10px 0px
                 margin: 0 20px
-        // .toggle
-        //     display: flex
-        //     justify-content: space-around
-        // .toggle__item
-        //     width: 100%
-        //     text-align: center
-        //     padding: 10px
-        //     border: 1px solid $color__grayscale--light
-        //     border-bottom: 1px solid $color__main--green
-        //     color: $color__grayscale--bold
-        //     @extend %text__content
-        // .toggle__item-tab
-        //     background-color: $color__main--green
-        //     color: $color__sub--paleblue
-        // .showProducts
-        //     position: relative
-
-
-        // 光學眼鏡,太陽眼鏡,隱形眼鏡,保健食品
-        // .catalog-toggle
-        //     width: 100%
-        //     display: flex
-        //     justify-content: space-between
-        //     margin: 20px 0
-        // .catalog-toggle__item
-        //     width: calc( 100%/5 )
-        //     text-align: center
-        //     padding: 20px 0
-        //     margin: 0 5px
-        //     border: 1px solid $color__grayscale--light
-        //     background-color: $color__grayscale--medium
-        //     color: $color__sub--paleblue
-        //     @extend %text__content
-        //     position: relative
-        //     transition: 0.5s
-        //     &:hover
-        //         background-color: $color__main--blue
-        //         transition: 0.5s
-        //         &::before
-        //             content: ""
-        //             position: absolute
-        //             top: 100%
-        //             left: 50%
-        //             transform: translateX(-50%)
-        //             border-width: 10px 10px 0px 10px
-        //             border-style: solid
-        //             border-color: $color__main--blue transparent transparent transparent
-
+        
         // 全部商品
 
         input[type="radio"], .formBlock , .page__sunglasses , .page__contactLens, .page__contactLens--colored
