@@ -1,6 +1,6 @@
 專案：小林眼鏡切版
 內容：針對小林眼鏡官網，仿造特定頁面進行切版練習
-參與人員：遲瀞玟、莊詠庭、小賴、Alex、阿貴
+參與人員：遲瀞玟、莊詠庭、賴欣怡、Alex、阿貴
 分工：
     遲瀞玟：麵包屑元件、github頁面統整 / 元件整合、進度回報、開會事項研擬
         小林大事紀
@@ -8,7 +8,7 @@
         聯絡小林
             https://fukahire.github.io/kobayashi/contact.html
    
-    莊詠庭、小賴：
+    莊詠庭、賴欣怡：
         產品目錄
             https://fukahire.github.io/kobayashi/contact.html
 
