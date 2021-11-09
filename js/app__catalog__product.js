@@ -1,77 +1,3 @@
-$(function(){
-    let i = 0;
-    let slideshow = $(".slideshow")
-    let arrowLeft = $(".slideshow__button--left");
-    let arrowRight = $(".slideshow__button--right");
-
-    // 複製第一張圖
-    let clone__first = $("#first__img").clone();
-    slideshow.append(clone__first)
-
-    //計算圖片數量
-    let sliderNum = $(".carousel__img").length
-
-    // 輪播圖寬度
-    slideshow.css("width", sliderNum * 100+"vw")
-
-    // 新增圓點
-    for(let j = 0 ; j < sliderNum-1 ; j++){
-        $(".slideshow__dot").append("<span class='dot'></span>");
-    }
-
-    // 填滿圓點
-    function dotFull(index){
-        $(".dot").eq(index).addClass("slideshow__dot--selected").siblings().removeClass("slideshow__dot--selected")
-    }
-    // 預設第一個圓點被填滿
-    dotFull(0)
-
-    // 向右滑動
-    function sliderRight(){
-        // 每按右鍵的時的時候，i會加1
-        i++;
-
-        //向右移動 i * -100
-        slideshow.animate({left: i * - 100 + "vw"},400,function(){
-            if(i == sliderNum - 1){
-
-                slideshow.css("left",0);
-                i = 0;
-            }
-            dotFull(i);
-
-        })        
-    }
-    //向左滑動 i * -100
-    function sliderLeft(){
-        if (i == 0) {
-            slideshow
-            .css("left",(sliderNum-1) * -100 + "vw")
-            .animate({left:(sliderNum-2) * -100 + "vw"},500)
-
-            i = sliderNum-2;
-        }else{
-            i--;
-            slideshow.animate({left: i * -100 + "vw"},500)
-        }
-        dotFull(i);
-    }
-
-
-
-    arrowRight.click(function(){
-        sliderRight();
-    })
-    arrowLeft.click(function(){
-        sliderLeft();
-    })
-})
-
-
-
-    
-   
-
 
 // 按鈕樣式改變
 
@@ -385,52 +311,84 @@ console.log(productBox)
 const originLists = Array.from(productBox.children); /* 原商品陣列(未排序) */ 
 // Array.from() 方法會從類陣列（array-like）或是可迭代（iterable）物件建立一個新的 Array 實體。
 console.log(...originLists)
+// console.log(originLists)
 
 let lists = Array.from(productBox.children); /* 用來排序的陣列 */ 
 let select = document.getElementById("select"); /* 下拉選單 */
 
+select.onchange = sortingValue;
 
-select.addEventListener("change",function(){
+function sortingValue(){
+    if(this.value === "default"){
+        while(productBox.firstChild){
+            productBox.removeChild(productBox.firstChild);
+        }
+        // print出原商品陣列
+        productBox.append(...originLists);
+        console.log(productBox);
+    }
 
-    if(this.value === "4"){
-        low__high.setAttribute("selected","selected");
-        // console.log(order.value);           
-        all__products.sort(function(a,b){
-            return a.cost - b.cost;
-        });
-        again();
-    }else if(this.value === "3"){
-        high__low.setAttribute("selected","selected");
-        all__products.sort(function(a,b){
-            return b.cost - a.cost;
-        })
-        again();
-    }else if(this.value === "2"){
-        za.setAttribute("selected","selected");
-        all__products.sort(function(a,b){
-            return a.title > b.title ? -1 : 1;
-        })
-        again();
-    }else if(this.value === "1"){
-        az.setAttribute("selected","selected");
-        all__products.sort(function(a,b){
-            return  a.title < b.title ? -1 : 1;
-        })
-        again();
-    }        
-})
- 
-    
-// 清空productBox還有觸發function
-function again(){
-    // 清空productBox
+    if(this.value === "az"){
+        sortCaps(productBox , lists, true)
+    }
+    if (this.value === "za") {    
+        sortCaps(productBox, lists, false);
+      }
+      
+    if (this.value === "lowToHigh") {
+        sortCost(productBox, lists, true);
+    }
+
+    if (this.value === "highToLow") {    
+        sortCost(productBox, lists, false);
+    }
+}
+//  按照價格排序
+function sortCost(productBox, lists, asc){
+    let sortli = lists.sort((a,b)=>{
+        let aPrice = a.getAttribute("data-price");
+        let bPrice = b.getAttribute("data-price");
+        
+        /* asc判斷升降冪 */
+        if(asc){
+            return aPrice - bPrice
+        }else{
+            return bPrice - aPrice
+        }
+
+    });
+
+    // 刪掉全部
     while(productBox.firstChild){
         productBox.removeChild(productBox.firstChild);
     }
-    // 重新觸發function
-    pros();
+    productBox.append(...sortli)
+
 }
-    
+
+/* 按照字母排序*/
+function sortCaps(productBox, lists, asc){
+
+
+    let sortli = lists.sort((a,b)=>{
+        let aTitle = a.getAttribute("data-title").toUpperCase();
+        let bTitle = b.getAttribute("data-title").toUpperCase();
+
+        let type;
+        type = asc ? 1 : -1
+        console.log(type)
+        return aTitle > bTitle ? (1*type) : (-1*type);
+    });
+
+    while(productBox.firstChild){
+        productBox.removeChild(productBox.firstChild);
+    }
+
+    productBox.append(...sortli);
+    console.log(...sortli)
+
+}
+
 
 /*
 * 勾選顯示類別
